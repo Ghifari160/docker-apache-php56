@@ -1,3 +1,1 @@
-<?php
-phpinfo();
-?>
+16.04/index.php
