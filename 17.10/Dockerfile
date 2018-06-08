@@ -1,20 +1,18 @@
 FROM ghifari160/apache:17.10
 
-MAINTAINER Ghifari160 <ghifari160@ghifari160.com>
+LABEL maintainer "Ghifari160 <ghifari160@ghifari160.com>"
 
-# disable interactive functions
+# Disable interactive functions
 ENV DEBIAN_FRONTEND noninteractive
 
-# switch locale to UTF-8 and add ppa for php56
+# Switch locale to UTF-8 and add ppa for php56
 RUN export LC_ALL=en_US.UTF-8 && add-apt-repository -y ppa:ondrej/php
 
-# add the custom default page
+# Add the custom default page
 RUN rm /var/www/html/index.html
 ADD index.php /var/www/html/index.php
 
-# install php56
+# Install php56
 RUN apt update && apt install -y php5.6 php5.6-mysql php-gettext \
-        php5.6-mbstring php-xdebug libapache2-mod-php5.6 php5.6-dom
-
-# cleanup after apt
-RUN rm -rf /var/lib/apt/lists/*
+        php5.6-mbstring php-xdebug libapache2-mod-php5.6 php5.6-dom && \
+    apt clean && rm -rf /var/lib/apt/lists/*
