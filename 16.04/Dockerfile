@@ -1,6 +1,6 @@
 FROM ghifari160/apache:16.04
 
-MAINTAINER Ghifari160 <ghifari160@ghifari160.com>
+LABEL maintainer "Ghifari160 <ghifari160@ghifari160.com>"
 
 # Disable interactive functions
 ENV DEBIAN_FRONTEND noninteractive
@@ -14,7 +14,5 @@ ADD index.php /var/www/html/index.php
 
 # Install php56
 RUN apt update && apt install -y php5.6 php5.6-mysql php-gettext \
-        php5.6-mbstring php-xdebug libapache2-mod-php5.6 php5.6-dom
-
-# Cleanup after apt
-RUN rm -rf /var/lib/apt/lists/*
+        php5.6-mbstring php-xdebug libapache2-mod-php5.6 php5.6-dom && \
+    apt clean && rm -rf /var/lib/apt/lists/*

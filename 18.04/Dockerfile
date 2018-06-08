@@ -1,4 +1,4 @@
-FROM ghifari160/apache:17.10
+FROM ghifari160/apache:18.04
 
 LABEL maintainer "Ghifari160 <ghifari160@ghifari160.com>"
 
