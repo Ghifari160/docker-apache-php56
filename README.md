@@ -61,6 +61,7 @@ docker run -d -e G16_MACOS=yes ghifari160/apache
 | `16.04` `xenial`          | 16.04          | [![](https://images.microbadger.com/badges/image/ghifari160/apache-php56:16.04.svg)](https://microbadger.com/images/ghifari160/apache-php56:16.04 "Get your own image badge on microbadger.com")|
 | `17.10` `artful`          | 17.10          | **NOT SUPPORTED** |
 | `latest` `18.04` `bionic` | 18.04          |[![](https://images.microbadger.com/badges/image/ghifari160/apache-php56.svg)](https://microbadger.com/images/ghifari160/apache-php56 "Get your own image badge on microbadger.com")|
+| `devel` `18.10` `cosmic`  | 18.10          |[![](https://images.microbadger.com/badges/image/ghifari160/apache-php56:18.10.svg)](https://microbadger.com/images/ghifari160/apache-php56:18.10 "Get your own image badge on microbadger.com")|
 
 [ghifari160/apache]: https://github.com/ghifari160/docker-apache
 [ghifari160/apache-php55]: https://github.com/ghifari160/docker-apache-php55
